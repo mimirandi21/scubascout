@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+		<script defer type="text/javascript" src="main.js"></script>
+		<title>Scuba Scout</title>
+        <style>
+            html {
+                cursor: url('tinyfish.png'), auto;
+            }
+        </style>
+	</head>
+	<body>
+		<!-- Background Setup -->
+
+		<div class="background">
+			<div class="water"></div>
+		</div>
+		<svg>
+			<filter id="turbulence" x="0" y="0" width="100%" height="100%">
+				<feTurbulence
+					id="waterbubbles-filter"
+					numOctaves="3"
+					seed="2"
+					baseFrequency="0.02 0.05"
+				></feTurbulence>
+				<feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+				<animate
+					xlink:href="#waterbubbles-filter"
+					attributeName="baseFrequency"
+					dur="60s"
+					keyTimes="0;0.5;1"
+					values="0.02 0.06;0.04 0.08;0.02 0.06"
+					repeatCount="indefinite"
+				></animate>
+			</filter>
+		</svg>
+
+		<!--  Hero Section  -->
+
+		<div class="hero">
+			<h1 class="hero_label">Find a Scuba Shop <br> Near You!</h1>
+			<div class="search">
+				<input class="search_input" type="text" placeholder="Enter zipcode" />
+				<input class="search_button" type="submit" value="Submit"></input>
+			</div>
+		</div>
+
+        <!--  BUBBLES!!  -->
+
+        <div class="bubbles">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+        </div>
+
+		<!--  Footer  -->
+
+		<footer>Photo by julie aagaard from Pexels</footer>
+	</body>
+</html>
